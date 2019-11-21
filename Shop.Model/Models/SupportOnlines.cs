@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Shop.Model.Models
 {
@@ -35,11 +31,11 @@ namespace Shop.Model.Models
         public string Yahoo { get; set; }
 
         [MaxLength]
-        public string Facebook { get; set; }    
+        public string Facebook { get; set; }
 
         [MaxLength(50)]
         public bool Status { get; set; }
-        public int? DisplayOrder { get; set; }
 
+        public int? DisplayOrder { get; set; }
     }
 }
