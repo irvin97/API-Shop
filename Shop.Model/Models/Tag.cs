@@ -8,6 +8,7 @@ namespace Shop.Model.Models
     {
         [Key]
         [MaxLength(50)]
+        [Column(TypeName ="varchar")]
         public string ID { get; set; }
 
         [Required]
@@ -15,7 +16,7 @@ namespace Shop.Model.Models
         public string Name { get; set; }
 
         [Required]
-        [MaxLength]
+        [MaxLength(50)]
         public string Type { get; set; }
     }
 }
