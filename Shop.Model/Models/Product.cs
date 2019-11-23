@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Xml.Linq;
 
 namespace Shop.Model.Models
 {
@@ -25,8 +24,9 @@ namespace Shop.Model.Models
         [MaxLength(256)]
         public string Image { get; set; }
 
-        [Column(TypeName ="xml")]
+        [Column(TypeName = "xml")]
         public string Moreimage { get; set; }
+
         public decimal Price { get; set; }
         public decimal? PromotionPrice { get; set; }
         public int? Warranty { get; set; }
