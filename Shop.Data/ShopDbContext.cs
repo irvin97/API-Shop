@@ -10,9 +10,16 @@ namespace Shop.Data
 {
     public class ShopDbContext:DbContext
     {
-        public ShopDbContext():base("APIShopDbContext")
+        //public ShopDbContext() : base("APIShop")
+        //{
+
+        //    this.Configuration.LazyLoadingEnabled = false;
+        //}
+
+        public ShopDbContext() : base("APIShop")
         {
-            this.Configuration.LazyLoadingEnabled = false;
+            string databasename = "APIShop";
+            this.Database.Connection.ConnectionString = "Data Source=.\\IRVIN;Initial Catalog=" + databasename + ";Trusted_Connection=Yes";
         }
 
         public DbSet<Footer> Footers { set; get; }
